@@ -1,10 +1,12 @@
 package entity;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Drogueria {
     protected List<Medicamento> medicamento;
 
     public Drogueria(List<Medicamento> medicamento) {
-        this.medicamento = medicamento;
+        this.medicamento = new ArrayList<>();
     }
 
     public List<Medicamento> getMedicamento() {

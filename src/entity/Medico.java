@@ -1,10 +1,9 @@
 package entity;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Medico {
     protected String nombre;
-    protected String apellido;
     protected int id;
     protected boolean particular;
     protected List<ObraSocial> obraSocial;
@@ -12,14 +11,14 @@ public class Medico {
 
 
     //constructores
-    public Medico(String nombre, String apellido, int id, boolean particular, List<ObraSocial> obraSocial, Especialidad especialidad) {
+    public Medico(String nombre, int id, boolean particular, List<ObraSocial> obraSocial, Especialidad especialidad) {
         this.nombre = nombre;
-        this.apellido = apellido;
         this.id = id;
         this.particular = particular;
         this.obraSocial = obraSocial;
         this.especialidad = especialidad;
     }
+
     //getters y setters
 
 
@@ -29,14 +28,6 @@ public class Medico {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public int getId() {

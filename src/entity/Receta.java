@@ -1,4 +1,5 @@
 package entity;
+import java.util.List;
 
 public class Receta {
     protected int id;

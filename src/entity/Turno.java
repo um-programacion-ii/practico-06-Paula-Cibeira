@@ -5,7 +5,6 @@ public class Turno {
     protected Paciente paciente;
     protected Medico medico;
     boolean usaObraSocial;
-    boolean usaParticular;
     protected boolean estadoTurno;
 
     public Turno(int id, Paciente paciente, Medico medico, boolean usaObraSocial, boolean usaParticular, boolean estadoTurno) {
@@ -13,8 +12,7 @@ public class Turno {
         this.paciente = paciente;
         this.medico = medico;
         this.usaObraSocial = usaObraSocial;
-        this.usaParticular = usaParticular;
-        this.estadoTurno = estadoTurno;
+        this.estadoTurno = false;
     }
 
     public int getId() {
@@ -44,18 +42,11 @@ public class Turno {
     public boolean isUsaObraSocial() {
         return usaObraSocial;
     }
-
+// si no usa obra social entonces es particular
     public void setUsaObraSocial(boolean usaObraSocial) {
         this.usaObraSocial = usaObraSocial;
     }
 
-    public boolean isUsaParticular() {
-        return usaParticular;
-    }
-
-    public void setUsaParticular(boolean usaParticular) {
-        this.usaParticular = usaParticular;
-    }
 
     public boolean isEstadoTurno() {
         return estadoTurno;
