@@ -12,7 +12,7 @@ public class CompraDAO implements CompraInterfaz {
     private static CompraDAO instance;
     private Map<Integer, Compra> compras;
 
-    private CompraDAO() {
+    public CompraDAO() {
         compras = new HashMap<>();
     }
 

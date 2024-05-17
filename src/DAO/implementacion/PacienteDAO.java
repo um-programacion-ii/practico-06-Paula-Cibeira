@@ -12,7 +12,7 @@ import java.util.ArrayList;
         private static PacienteDAO instance;
         private Map<Integer, Paciente> pacientes;
 
-        private PacienteDAO() {
+        public PacienteDAO() {
             pacientes = new HashMap<>();
         }
 

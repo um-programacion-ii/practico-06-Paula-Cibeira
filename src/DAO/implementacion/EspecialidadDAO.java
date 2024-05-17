@@ -12,7 +12,7 @@ public class EspecialidadDAO implements EspecialidadInterfaz {
     private static EspecialidadDAO instance;
     private Map<Integer, Especialidad> especialidades;
 
-    private EspecialidadDAO() {
+    public EspecialidadDAO() {
         especialidades = new HashMap<>();
     }
 

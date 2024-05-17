@@ -8,6 +8,9 @@ public class Especialidad {
         this.id = id;
         this.nombre = nombre;
     }
+    public Especialidad( String nombre) {
+        this.nombre = nombre;
+    }
 
     public int getId() {
         return id;

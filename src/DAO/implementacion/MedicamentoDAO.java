@@ -12,7 +12,7 @@ public class MedicamentoDAO implements MedicamentoInterfaz {
     private static MedicamentoDAO instance;
     private Map<Integer, Medicamento> medicamentos;
 
-    private MedicamentoDAO() {
+    public MedicamentoDAO() {
         medicamentos = new HashMap<>();
     }
 

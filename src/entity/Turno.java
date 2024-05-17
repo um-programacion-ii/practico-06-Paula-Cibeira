@@ -7,7 +7,7 @@ public class Turno {
     boolean usaObraSocial;
     protected boolean estadoTurno;
 
-    public Turno(int id, Paciente paciente, Medico medico, boolean usaObraSocial, boolean usaParticular, boolean estadoTurno) {
+    public Turno(int id, Paciente paciente, Medico medico, boolean usaObraSocial, boolean estadoTurno) {
         this.id = id;
         this.paciente = paciente;
         this.medico = medico;

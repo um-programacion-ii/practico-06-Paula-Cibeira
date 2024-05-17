@@ -3,17 +3,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Drogueria {
-    protected List<Medicamento> medicamento;
 
-    public Drogueria(List<Medicamento> medicamento) {
-        this.medicamento = new ArrayList<>();
+    private static Drogueria instance;
+    private Drogueria() {
+    }
+    //patron singleton
+    public static Drogueria getInstance() {
+        if (instance == null) {
+            instance = new Drogueria();
+        }
+        return instance;
     }
 
-    public List<Medicamento> getMedicamento() {
-        return medicamento;
-    }
-
-    public void setMedicamento(List<Medicamento> medicamento) {
-        this.medicamento = medicamento;
+    public int enviarStock(Pedido pedido) {
+        return pedido.getCantidad();
     }
 }
+

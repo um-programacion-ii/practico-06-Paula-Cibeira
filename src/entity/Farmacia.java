@@ -1,19 +1,39 @@
 package entity;
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Farmacia {
-    protected List<Medicamento> medicamento;
+    private Map<Medicamento, Integer> stock;
 
-    public Farmacia(List<Medicamento> medicamento) {
-        this.medicamento = new ArrayList<>();
+    private static Farmacia instance;
+
+    //singleton
+    public static Farmacia getInstance() {
+        if (instance == null) {
+            instance = new Farmacia();
+        }
+        return instance;
     }
 
-    public List<Medicamento> getMedicamento() {
-        return medicamento;
+    private Farmacia() {
+        this.stock = new HashMap<>();
     }
 
-    public void setMedicamento(List<Medicamento> medicamento) {
-        this.medicamento = medicamento;
+    public Map<Medicamento, Integer> getStock() {
+        return stock;
+    }
+
+    public void agregarStock(Medicamento medicamento, int cantidad) {
+        int cantidadActual = stock.getOrDefault(medicamento, 0);
+        stock.put(medicamento, cantidadActual + cantidad);
+    }
+
+    public void restarStock(Medicamento medicamento) {
+        int cantidadActual = stock.getOrDefault(medicamento, 0);
+        stock.put(medicamento, cantidadActual - 1);
+    }
+    public boolean stockSuficiente(Medicamento medicamento) {
+        return stock.getOrDefault(medicamento, 0) >= 1;
     }
 }

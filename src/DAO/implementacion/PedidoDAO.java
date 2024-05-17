@@ -12,7 +12,7 @@ public class PedidoDAO implements PedidoInterfaz {
     private static PedidoDAO instance;
     private Map<Integer, Pedido> pedidos;
 
-    private PedidoDAO() {
+    public PedidoDAO() {
         pedidos = new HashMap<>();
     }
     //uso el patron singleton

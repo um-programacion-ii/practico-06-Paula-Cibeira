@@ -12,7 +12,7 @@ public class TurnoDAO implements TurnoInterfaz {
     private static TurnoDAO instance;
     private Map<Integer, Turno> turnos;
 
-    private TurnoDAO() {
+    public TurnoDAO() {
         turnos = new HashMap<>();
     }
     //uso el patron singleton

@@ -12,7 +12,7 @@ public class MedicoDAO implements MedicoInterfaz {
     private static MedicoDAO instance;
     private Map<Integer, Medico> medicos;
 
-    private MedicoDAO() {
+    public MedicoDAO() {
         medicos = new HashMap<>();
     }
 

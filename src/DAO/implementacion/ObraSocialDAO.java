@@ -12,7 +12,7 @@ public class ObraSocialDAO implements ObraSocialInterfaz {
     private static ObraSocialDAO instance;
     private Map<Integer, ObraSocial> obrassociales;
 
-    private ObraSocialDAO() {
+    public ObraSocialDAO() {
         obrassociales = new HashMap<>();
     }
 
